@@ -13,3 +13,13 @@
 nota1 = int(input("ingrese nota del primer parcial"))
 nota2 = int(input("ingrese nota del segundo parcial"))
 nota3 = int(input("ingrese nota del tercer parcial"))
+if nota3 >= 6:
+    promedio = (nota1 + nota2 + nota3) // 3
+    if promedio >= 6:
+        print("El promedio del alumno es: ",promedio)
+        print("La nota del Tercer parcial supera el 6.\nTercer parcial =",nota3)
+        print("MATERIA APROBADA")
+    else:
+        print("No aprobado el promedio es: ",promedio)
+else:
+    print("No aprobado.La nota del TERCER PARCIAL debe ser mayor o igual a 6.")
