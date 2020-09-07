@@ -8,3 +8,8 @@
 #   aprobo o no la materia.
 #
 #-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+nota1 = int(input("ingrese nota del primer parcial"))
+nota2 = int(input("ingrese nota del segundo parcial"))
+nota3 = int(input("ingrese nota del tercer parcial"))
