@@ -10,16 +10,31 @@
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
-nota1 = int(input("ingrese nota del primer parcial"))
-nota2 = int(input("ingrese nota del segundo parcial"))
-nota3 = int(input("ingrese nota del tercer parcial"))
+#Aqui damos un mensaje de bienvenida
+print("Bienvenido al sistema de profesores de la escuela X")
+#Pedimos que ingrese nombre y apellido del alumno para identificarlo
+alumno= input("Ingrese el nombre y apellido del alumno: ")
+#Un mensaje de instrucción:
+print("A continuación, deberá ingresar la Materia que debe calcular, y luego las tres notas del alumno", alumno)
+#Agregamos la variable materia:
+materia= input("Ingrese el nombre de la materia: ")
+
+nota1 = float(input("ingrese nota del primer parcial (1 al 10): "))
+nota2 = float(input("ingrese nota del segundo parcial (1 al 10): "))
+nota3 = float(input("ingrese nota del tercer parcial (1 al 10): "))
+promedio=(nota1+nota2+nota3)/3
+
+#Agregamos la funcion aprobado
+def aprobado():
+    print("El promedio del alumno: ", alumno, "es: ",promedio)
+    print(alumno,"Aprobó: ", materia)
+
 if nota3 >= 6:
-    promedio = (nota1 + nota2 + nota3) // 3
     if promedio >= 6:
-        print("El promedio del alumno es: ",promedio)
-        print("La nota del Tercer parcial supera el 6.\nTercer parcial =",nota3)
-        print("MATERIA APROBADA")
+         aprobado()
     else:
-        print("No aprobado el promedio es: ",promedio)
+        print("El alumno: ", alumno, ",obtuvo un promedio de: ",promedio, ".No esta aprobado")  
 else:
     print("No aprobado.La nota del TERCER PARCIAL debe ser mayor o igual a 6.")
+
+    
